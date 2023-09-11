@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Site\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/index', [SiteController::class, 'index']);
+
+Route::get('/menu', [SiteController::class, 'menu']);
+
+Route::get('/tcc', [SiteController::class, 'tcc']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
