@@ -2,7 +2,7 @@
 @section('title', 'Notícias')
 @section('content')
 
-<div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+<div id="demo" class="container carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
 
     <div class="carousel-indicators" id="carousel-indicators">
     </div>
@@ -19,10 +19,10 @@
 </div>
 
 <div class="container mt-5">
-    <h2 class="text-left">Notícias Computação:</h1>
+    <h3 class="text-left">Notícias Computação:</h3>
 </div>
 
-<div class="album py-2 library">
+<div class="album py-3 library">
     <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -87,10 +87,10 @@
 
 <script>
     const carouselImages = [
-        "{{ asset('images/ifnmg.png') }}",
-        "{{ asset('images/ifnmg.png') }}",
-        "{{ asset('images/ifnmg.png') }}",
-        "{{ asset('images/ifnmg.png') }}"
+        "{{ asset('images/Cursos_Norteja_Banner.png') }}",
+        "{{ asset('images/Cursos_Norteja_Banner.png') }}",
+        "{{ asset('images/Cursos_Norteja_Banner.png') }}",
+        "{{ asset('images/Cursos_Norteja_Banner.png') }}"
     ];
 
     const carouselInner = document.getElementById('carousel-inner');
@@ -108,8 +108,6 @@
         image.setAttribute('alt', `Image ${i + 1}`);
         image.classList.add('carousel-image');
 
-        image.style.width = '100px';
-        image.style.height = '400px';
 
         carouselItem.appendChild(image);
         carouselInner.appendChild(carouselItem);
