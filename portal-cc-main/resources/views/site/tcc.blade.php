@@ -1,145 +1,58 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+@extends('site/menu')
+@section('title', 'TCC')
+@section('content')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ asset('css/padrao.css') }}" rel="stylesheet">
-    <title>Seu Título Aqui</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&family=Poppins:wght@100&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-</head>
-
-<body>
-    <header class="header-1">
-        <div class="container-1">
-            <div class="d-flex justify-content-between align-items-center py-2">
-                <div>
-                    <span class="fs-6">INSTITUTO FEDERAL DO NORTE DE MINAS GERAIS</span>
-                </div>
-                <div>
-                    <a href="{{ route('login') }}" class="text-white text-decoration-none me-2">Login</a>
-                    <span class="separator">|</span>
-
-                    <span class="search-icon" id="search-icon">
-                        <i class="fas fa-search"></i>
-                    </span>
-
-                    <div class="search-input" id="search-input">
-                        <input type="text" placeholder="Pesquisar">
-                        <span class="close-icon" id="close-icon">
-                            <i class="fas fa-times"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-2">
-            <nav class="navbar navbar-expand-lg bg-white custom-navbar">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="{{ asset('images/logo-criada.png') }}" alt="Ciência da Computação" class="logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse custom-navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav ms-auto">
-
-                            <li class="nav-item dropdown dropdown-item-custom">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Curso
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item " href="#">Opção 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Opção 2</a></li>
-                                    <li><a class="dropdown-item" href="#">Opção 3</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown dropdown-item-custom">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Notícias
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Opção 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Opção 2</a></li>
-                                    <li><a class="dropdown-item" href="#">Opção 3</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown dropdown-item-custom">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Pesquisa
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Opção 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Opção 2</a></li>
-                                    <li><a class="dropdown-item" href="#">Opção 3</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item dropdown dropdown-item-custom">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    TCC
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Opção 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Opção 2</a></li>
-                                    <li><a class="dropdown-item" href="#">Opção 3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-    </header>
-
-    <div id="message"></div>
-
-    <div class="navbar-divider"></div>
-
-    <div class="custom-container">
+<div class="custom-container">
+    <div>
         <div>
-            <div>
-                <i class="fas fa-graduation-cap fa-2x"></i> <!-- Ícone de uma beca -->
-                <h3 class="smaller-font">TCC</h3> <!-- Texto "Cadastro de Professores" -->
-            </div>
+            <i class="fas fa-graduation-cap fa-2x"></i>
+            <h3 class="smaller-font">Cadastro do TCC</h3>
         </div>
     </div>
+</div>
 
-    <!-- Restante do conteúdo da sua página -->
-    <script>
-        const searchIcon = document.getElementById('search-icon');
-        const searchInput = document.getElementById('search-input');
-        const closeIcon = document.getElementById('close-icon');
-        const message = document.getElementById('message');
+<div class="container mt-4">
+    <form>
+        <div class="mb-3">
+            <label for="titulo" class="form-label"> <br>Título*:</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Digite o título" required>
+        </div>
+        <div class="mb-3">
+            <label for="resumo" class="form-label"><br>Resumo*:</label>
+            <textarea class="form-control" id="resumo" rows="4" placeholder="Digite o resumo" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="link" class="form-label"><br>Link para Download:</label>
+            <input type="url" class="form-control" id="link" placeholder="Insira o link">
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                <label for="aluno" class="form-label"> <br>Aluno*:</label>
+                <select class="form-select" id="aluno" required>
+                    <option value="" disabled selected>Selecione um aluno</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3 d-flex align-items-end">
+                <a href="#" class="btn custom-button">Cadastrar Aluno</a>
+            </div>
+        </div>
 
-        searchIcon.addEventListener('click', () => {
-            if (searchInput.classList.contains('active') && searchInput.querySelector('input').value.trim() !== '') {
-                message.textContent = 'Você digitou: "' + searchInput.querySelector('input').value.trim() + '"';
+        <div class="d-flex justify-content-center mt-4">
+            <button type="submit" class="btn custom-button">Cadastrar TCC</button>
+        </div>
+    </form>
+</div>
 
-                // Adicionar aqui página para busca
+<script>
+    var selectAluno = document.getElementById('aluno');
+    var alunos = ['Aluno 1', 'Aluno 2', 'Aluno 3'];
 
-            } else if (!searchInput.classList.contains('active')) {
-                searchInput.classList.add('active');
-            }
-        });
+    for (var i = 0; i < alunos.length; i++) {
+        var option = document.createElement('option');
+        option.value = 'aluno' + (i + 1);
+        option.text = alunos[i];
+        selectAluno.appendChild(option);
+    }
+</script>
 
-        closeIcon.addEventListener('click', () => {
-            searchInput.classList.remove('active');
-        });
-    </script>
-</body>
-
-</html>
+@endsection

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('css/estilo.css') }}" rel="stylesheet">
-    <title>Seu Título Aqui</title>
+    <title>@yield('title', 'Menu')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -106,6 +106,10 @@
     <div id="message"></div>
 
     <div class="navbar-divider"></div>
+
+    <div class="container2">
+        @yield('content')
+    </div>
 
 
     <script>
