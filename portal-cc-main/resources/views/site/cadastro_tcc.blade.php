@@ -1,5 +1,5 @@
 @extends('site/menu')
-@section('title', 'TCC')
+@section('title', 'Cadastro TCC')
 @section('content')
 
 <div class="custom-container">

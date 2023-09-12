@@ -97,27 +97,27 @@
 
 /* ------------------------------- */
 #demo.carousel {
-    width: 60%;
-    height: 450px;
+    width: 70%;
+    height: auto;
     margin: 0 auto;
     margin-top: 50px;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
 .carousel-image {
     min-width: 100%; 
-    height: 450px; 
+    height: auto; 
     object-fit: cover;
 }
 
 @media screen and (max-width: 990px) {
     #demo.carousel {
         width: 80%;
-        height: 450px;
+        height: auto;
         margin: 0 auto;
         margin-top: 50px;
-        border-radius: 10px;
+        border-radius: 5px;
         overflow: hidden;
     }
 
@@ -145,4 +145,11 @@
 .btn.custom-button:hover {
     background-color: #2e3e6d; 
     color: #ffffff;
+}
+.div_filtro{
+    margin-top: 40px;
+}
+
+.h4_filtro{
+    font-size: 20px;
 }

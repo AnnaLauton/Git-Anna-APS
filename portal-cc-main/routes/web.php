@@ -25,6 +25,8 @@ Route::get('/menu', [SiteController::class, 'menu']);
 
 Route::get('/cadastro_tcc', [SiteController::class, 'cadastro_tcc']);
 
+Route::get('/lista_tcc', [SiteController::class, 'lista_tcc']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -14,6 +14,11 @@ class SiteController
         return view('site/cadastro_tcc');
     }
 
+    public function lista_tcc()
+    {
+        return view('site/lista_tcc');
+    }
+
     public function menu()
     {
         return view('site/menu');
