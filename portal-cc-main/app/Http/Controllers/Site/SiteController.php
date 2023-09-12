@@ -9,9 +9,9 @@ class SiteController
         return view('site/index');
     }
 
-    public function tcc()
+    public function cadastro_tcc()
     {
-        return view('site/tcc');
+        return view('site/cadastro_tcc');
     }
 
     public function menu()

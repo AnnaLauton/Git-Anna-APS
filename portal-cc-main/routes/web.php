@@ -23,7 +23,7 @@ Route::get('/index', [SiteController::class, 'index']);
 
 Route::get('/menu', [SiteController::class, 'menu']);
 
-Route::get('/tcc', [SiteController::class, 'tcc']);
+Route::get('/cadastro_tcc', [SiteController::class, 'cadastro_tcc']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
